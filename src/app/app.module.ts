@@ -7,19 +7,21 @@ import { AppRoutingModule } from './app-routing.module';
 // App
 import { AppComponent } from './app.component';
 
+// Servicios
+import { SettingsService } from './services/settings.service';
+
 // Principal components
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './login/register.component';
 
 // Modulos
 import { PagesModule } from './pages/pages.module';
-import { IncrementadorComponent } from './components/incrementador/incrementador.component';
 import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [AppComponent, LoginComponent, RegisterComponent],
   imports: [BrowserModule, AppRoutingModule, PagesModule, FormsModule],
-  providers: [],
+  providers: [SettingsService],
   bootstrap: [AppComponent]
 })
 export class AppModule {}
