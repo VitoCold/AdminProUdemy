@@ -5,8 +5,7 @@ import {
   Output,
   EventEmitter,
   ViewChild,
-  ElementRef,
-  Optional
+  ElementRef
 } from '@angular/core';
 
 @Component({
@@ -22,21 +21,11 @@ export class IncrementadorComponent implements OnInit {
 
   @ViewChild('txtPorcentaje', { static: false }) txtPorcentaje: ElementRef;
 
-  constructor() {
-    // console.log(this.leyenda);
-    // console.log(this.porcentaje);
-  }
+  constructor() {}
 
-  ngOnInit() {
-    // console.log(this.leyenda);
-    // console.log(this.porcentaje);
-  }
+  ngOnInit() {}
 
   onChange(nuevoValor: number) {
-    // const elemHtml: any = document.getElementsByName('porcentaje')[0];
-
-    // console.log(this.txtPorcentaje);
-
     if (nuevoValor > 100) {
       nuevoValor = 100;
     }

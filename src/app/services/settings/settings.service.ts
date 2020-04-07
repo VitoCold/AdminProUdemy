@@ -26,16 +26,16 @@ export class SettingsService {
 
   guardarAjustes() {
     localStorage.setItem('ajustes', JSON.stringify(this.ajustes));
-    console.log('Guardado en LS');
+    // console.log('Guardado en LS');
   }
 
   cargarAjustes() {
     if (localStorage.getItem('ajustes')) {
       this.ajustes = JSON.parse(localStorage.getItem('ajustes'));
-      console.log('Cargado del LS');
+      // console.log('Cargado del LS');
       this.aplicarTema(this.ajustes.tema);
     } else {
-      console.log('Cargando valores default');
+      // console.log('Cargando valores default');
     }
   }
 }
